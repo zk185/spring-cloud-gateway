@@ -131,4 +131,4 @@ spring:
 - localhost:8080/gateway/login/hello?name=zk 转发后地址 localhost:8081/login/hello?name=zk
 - localhost:8080/gateway/aa 转发后地址 localhost:8081/aa 并进入TokenCheckGatewayFilterFactory过滤器
 
-
+websocket使用后续补充
