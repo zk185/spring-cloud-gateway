@@ -118,11 +118,11 @@ spring:
 ```
 配置解释：
 - routes 可以包含多个id，每个id有自己的拦截配置，默认按照先后顺序匹配，直到匹配到第一个符合条件的路由，不再执行其他路由。
-所以注意将范围较大的规则放在后面匹配，如先写web/info/**后写web/**。
+所以注意将范围较大的规则放在后面匹配，如先写web/info/** 后写web/**。
 - id 保证唯一即可
 - uri 要转发的地址
 - predicates 可以转发的条件，包含多种参数，可结合使用，如Path、Header、Host等
-- Path 拦截请求地址，配置为/gateway/**，表示前端请求gateway/a、gateway/b都可以被拦截。
+- Path 拦截请求地址，配置为/gateway/** ，表示前端请求gateway/a、gateway/b都可以被拦截。
 - filters 选择过滤器，可以多种过滤器结合。
 - StripPrefix =1表示转发路径跳过1个前缀，如localhost:8080/gateway/info,转发后的地址为localhost:8081/info
 - TokenCheck 匹配的是TokenCheckGatewayFilterFactory过滤器
