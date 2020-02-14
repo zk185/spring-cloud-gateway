@@ -91,9 +91,10 @@ spring:
         # 拦截请求路径
         - Path=/gateway/**
         filters:
-        # 跳
-         个前缀
-        1 StripPrefix:8080/gateway/infolocalhost:8080/info=1
+        # 跳过1个前缀:
+        # localhost:8080/gateway/info
+        # localhost:8080/info
+        - StripPrefix = 1
         # token身份认证 TokenCheckGatewayFilterFactory
         - TokenCheck
         # 请求流量限制，默认5MB
